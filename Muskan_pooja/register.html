@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Login page</title>
+
+</head>
+<body background="loginback.jpg">
+
+<style>
+ /*input {
+    width:450px;
+    height:50px;
+    padding: 0px 15px;
+}*/
+h1{
+ color:white;
+}
+</style>
+<script>
+ 
+ function validate(){
+      var Name=document.getElementById('name');
+      var Uname=document.getElementById('uname');
+      var Email=document.getElementById('email');
+      var Dob=document.getElementById('dob');   
+      var Password=document.getElementById('passw');
+  
+     if(Name.value=="")
+     {
+     	alert("Please enter your name.");
+     	while(Name.value=="")
+     	{
+        var t=prompt("Please enter your name", "Harry Potter");
+        Name.value=t;
+        }
+       
+
+      }
+      if(Uname.value=="")
+     {
+     	alert("Please enter your name.");
+     	while(Uname.value=="")
+     	{
+        var t=prompt("Please enter your name", "Harry Potter");
+        Uname.value=t;
+        }
+        //return true;
+      }
+
+ if(Email.value=="")
+    {
+    	alert("Please enter an email");
+    	while(Email.value=="")
+     	{
+        var t=prompt("Please enter your email.", "abc@gmail.com");
+        Email.value=t;
+        }
+        if (Email.value.indexOf("@", 0) < 0)                 
+    { 
+        alert("Please enter a valid e-mail address."); 
+       while(Email.value.indexOf("@", 0) < 0)
+     	{
+        var t=prompt("Please enter your email.", "abc@gmail.com");
+        Email.value=t;
+        }
+    } 
+   
+    if (Email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+      while(Email.value.indexOf(".", 0) < 0)
+     	{
+        var t=prompt("Please enter your email.", "abc@gmail.com");
+        Email.value=t;
+        }
+    }
+}
+
+    if(Dob.value=="")
+    {
+        alert("Pleae enter your DOB.");
+        while(Dob.value=="")
+     	{
+        var t=prompt("Please enter your dob.", "26/11/1998");
+        Dob.value=t;
+        }
+        if(Dob.value.indexOf("/",0)!=2)
+        {
+         alert("Please enter a valid password."); 
+       while(Dob.value.indexOf("/",0)!=2)
+     	{
+        var t=prompt("Please enter a valid password.", "02/01/1999");
+       Dob.value=t;
+        }
+        }
+        if(Dob.value.indexOf("/",0)!=5)
+        {
+         alert("Please enter a valid password."); 
+       while(Dob.value.indexOf("/",0)!=5)
+     	{
+        var t=prompt("Please enter a valid password.", "02/01/1999");
+       Dob.value=t;
+        }
+        }	
+    }
+
+    if(Password.value=="")
+    {
+    	alert("Please enter a password");
+    	while(Password.value=="")
+    	{ 
+    	var t=prompt("Please enter a password.");
+        Password.value=t;
+    	}
+
+    	if(Password.value.length<7)
+    	{
+    			alert("Password should be of at least 7 characters.");
+    			while(Password.value.length<7)
+    	{ 
+    	var t=prompt("Password should be of at least 7 characters.");
+        Password.value=t;
+    	}
+    	}
+    }
+
+
+    
+        //return true;
+    
+
+    return true;
+ }
+
+</script>
+<form action="demo.html" name="RegForm" onsubmit="return validate()">
+<p><h1>Enter your details</h1></p>
+  <p ><h1>Name</h1></p><br> 
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" id="name" name="name" placeholder="Name"><br>
+<h1>  <input  type="radio" name="gender" value="male"> Male</h1><br>
+  <h1> <input type="radio" name="gender" value="female">Female</h1><br>
+ <h1>  <input type="radio" name="gender" value="other"> Other</h1>
+
+     <p><h1>Username</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" id="uname" name="uname" placeholder="Username"><br>
+   <p><h1>Email</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" name="email" id="email" placeholder="Email"><br>
+     <p ><h1>Date of birth</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" name="dob" id="dob"placeholder="DOB"><br>
+  <p><h1>Password:</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="password" name="passw" id="passw"placeholder="Password"><br><br><br><br>
+ <center> <input style="width:150px; height:50px; padding: 0px 15px" type="submit" value="Submit" ><center><br>
+</form>
+</body>
+</html>

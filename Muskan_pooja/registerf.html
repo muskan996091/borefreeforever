@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Login page</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function regina(){
+$("#name").val("Regina Phalange");
+ 	$("#passw").val("password");
+$("#uname").val("pheobe");
+$("#email").val("hello@gmail.com");
+$("#dob").val("1/1/2000");
+}
+
+function validate(){
+      var Name=document.getElementById('name');
+      var Uname=document.getElementById('uname');
+      var Email=document.getElementById('email');
+      var Dob=document.getElementById('dob');   
+      var Password=document.getElementById('passw');
+  
+     if(Name.value=="")
+     {
+     	alert("Please enter your name.");    
+
+      }
+      if(Uname.value=="")
+     {
+     	alert("Please enter your name.");
+       }
+
+ if(Email.value=="")
+    {
+    	alert("Please enter an email");
+        if (Email.value.indexOf("@", 0) < 0)                 
+    { 
+        alert("Please enter a valid e-mail address."); 
+       
+    } 
+   
+    if (Email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+      
+    }
+}
+
+    if(Dob.value=="")
+    {
+        alert("Pleae enter your DOB.");
+        if(Dob.value.indexOf("/",0)!=2)
+        {
+         alert("Please enter a valid password."); 
+       
+        }
+        if(Dob.value.indexOf("/",0)!=5)
+        {
+         alert("Please enter a valid dob."); 
+               }	
+    }
+
+    if(Password.value=="")
+    {
+    	alert("Please enter a password");
+    	
+    	if(Password.value.length<7)
+    	{
+    			alert("Password should be of at least 7 characters.");
+    			    	}
+    }
+      alert("Welcome " + $("#name").val()+"   Your username is "+$("#uname").val());  
+window.location.href = "animate.html";
+   
+ }
+
+
+
+</script>
+
+
+</head>
+<body background="loginback.jpg">
+
+<style>
+ /*input {
+    width:450px;
+    height:50px;
+    padding: 0px 15px;
+}*/
+h1{
+ color:white;
+}
+</style>
+
+<form action="animate.html" >
+<p><h1>Enter your details</h1></p>
+  <p ><h1>Name</h1></p><br> 
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" id="name" name="name" placeholder="Name">
+<br>
+
+<h1>  <input  type="radio" name="gender" value="male"> Male</h1><br>
+  <h1> <input type="radio" name="gender" value="female">Female</h1><br>
+ <h1>  <input type="radio" name="gender" value="other"> Other</h1>
+
+     <p><h1>Username</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" id="uname" name="uname" placeholder="Username"><br>
+
+   <p><h1>Email</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" name="email" id="email" placeholder="Email"><br>
+
+     <p ><h1>Date of birth</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="text" name="dob" id="dob"placeholder="DOB"><br>
+
+  <p><h1>Password:</h1></p>
+  <input style="width:450px; height:50px; padding: 0px 15px" type="password" name="passw" id="passw"placeholder="Password">
+
+<br><br><br><br>
+ <center> 
+<input style="width:150px; height:50px; padding: 0px 15px" type="submit" value="Submit" onclick="validate()">
+<button style="width:150px; height:50px; padding: 0px 15px" id="btn1" onclick="regina()">Reset</button>
+<center><br>
+</form>
+</body>
+</html>

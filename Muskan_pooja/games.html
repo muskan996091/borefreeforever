@@ -4,7 +4,51 @@
 <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
 <link href='sheader.css' rel='stylesheet'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+
+
+$(document).ready(function(){
+  $("#red").click(function(){
+    $("#flip").css("background-color", "red");
+  });
+});
+
+$(document).ready(function(){
+  $("#blue").click(function(){
+    $("#flip").css("background-color", "blue");
+  });
+});
+
+
+$(document).ready(function(){
+  $("#green").click(function(){
+    $("#flip").css("background-color", "green");
+  });
+});
+
+</script>
+
 <style>
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: white;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
 </style>
 </head>
 <title>Games</title>
@@ -32,6 +76,19 @@
   <a href="contact.html">Contact</a>
 </div>
 
+
+
+
+
+
+<div id="flip">Wanna play hangman?</div>
+<div id="panel"><a href=hang.html>click here to play</a>
+<br>To change the color of the panel click:<br>
+<button id="red">red</button>
+<button id="blue">blue</button>
+<button id="green">green</button>
+
+</div>
 <div class="w3-container w3-teal">
   <p align="center"><a href="https://www.spit.ac.in/">Sardar Patel Institue Of Technology</a><br>Contact:9999999999<br>borefreeInfo@gmail.com</p>
 </div>
@@ -56,6 +113,8 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
 </script>
 
 </body>
